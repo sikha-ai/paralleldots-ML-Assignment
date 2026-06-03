@@ -1,0 +1,7 @@
+├── main.py          # Script execution entrypoint (runs the inference loop)
+├── pipeline.py      # Core UniqueShelfPipeline class implementation logic
+├── requirements.txt # File listing exact project library dependencies 
+├── README.md        # Technical documentation and architectural blueprint 
+├── img_1.jpg        # Test beverage image
+├── img_2.jpg        # Test snack image
+└── img_3.jpg        # Test dairy image
