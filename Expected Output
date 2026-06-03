@@ -1,19 +1,32 @@
-{
+[
+  {
     "image_name": "img_1.jpg",
-    "total_products": 54,
+    "total_products": 54, 
     "brands": {
-        "Coca-Cola": 12,
-        "Pepsi": 10,
-        "Other": 32
+      "Coca-Cola": 12,
+      "Pepsi": 10,
+      "Other": 32
     },
-    "ocr_labels": ["125", "50", "99"],
-    "analytics_meta": {
-        "detected_shelf_rows": 4,
-        "items_per_row_distribution": {
-            "Row_1": 15,
-            "Row_2": 15,
-            "Row_3": 12,
-            "Row_4": 12
-        }
-    }
-}
+    "ocr_labels": ["125", "50", "99", "105"]
+  },
+  {
+    "image_name": "img_2.jpg",
+    "total_products": 38,
+    "brands": {
+      "Lay's": 15,
+      "Doritos": 8,
+      "Other": 15
+    },
+    "ocr_labels": ["20", "28", "99", "10"]
+  },
+  {
+    "image_name": "img_3.jpg",
+    "total_products": 42,
+    "brands": {
+      "Coca-Cola": 0,
+      "Pepsi": 0,
+      "Other": 42
+    },
+    "ocr_labels": ["25", "30", "60", "62", "Amul"]
+  }
+]
