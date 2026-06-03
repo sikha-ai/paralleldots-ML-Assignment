@@ -1,0 +1,19 @@
+{
+    "image_name": "img_1.jpg",
+    "total_products": 54,
+    "brands": {
+        "Coca-Cola": 12,
+        "Pepsi": 10,
+        "Other": 32
+    },
+    "ocr_labels": ["125", "50", "99"],
+    "analytics_meta": {
+        "detected_shelf_rows": 4,
+        "items_per_row_distribution": {
+            "Row_1": 15,
+            "Row_2": 15,
+            "Row_3": 12,
+            "Row_4": 12
+        }
+    }
+}
