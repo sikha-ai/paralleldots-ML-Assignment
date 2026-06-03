@@ -1,0 +1,33 @@
+```mermaid
+graph TD
+    %% Styling Configuration
+    classDef input fill:#E1F5FE,stroke:#0288D1,stroke-width:2px,color:#01579B;
+    classDef stage fill:#FFF3E0,stroke:#F57C00,stroke-width:2px,color:#E65100;
+    classDef helper fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px,color:#4A148C;
+    classDef output fill:#E8F5E9,stroke:#388E3C,stroke-width:2px,color:#1B5E20;
+
+    %% Workflow Nodes
+    A[Input Shelf Image File]:::input
+    
+    B[Stage 1: Object Localization<br/>Model: YOLOv8x Pre-trained]:::stage
+    
+    C[Dynamic Image Patch Cropping<br/>Extracts individual items]:::helper
+    D[Stage 2: Semantic Identity Classifier<br/>Model: OpenAI CLIP Zero-Shot ViT]:::stage
+    
+    E[Bounding Box Spatial Extraction<br/>Gathers Center Y-Coordinates]:::helper
+    F[Stage 3: Spatial Row Segmentation<br/>Algorithm: Heuristic 1D DBSCAN]:::stage
+    
+    G[Stage 4: Text Processing Engine<br/>Model: EasyOCR + Regex Filters]:::stage
+    
+    H[Consolidated Output Payload<br/>Structured JSON + Annotated Image Plots]:::output
+
+    %% Workflow Connections
+    A --> B
+    B --> C
+    B --> E
+    B --> G
+    C --> D
+    E --> F
+    D --> H
+    F --> H
+    G --> H
